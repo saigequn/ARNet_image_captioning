@@ -21,10 +21,10 @@ slim = tf.contrib.slim
 
 image_size = inception.inception_v4.default_image_size
 
-mscoco_images_path = '../../data/images_horizontal_flip/train2014'
+mscoco_images_path = '/content/ARNet_image_captioning/data/images_horizontal_flip/train2014'
 
-images_conv_feats_save_path = '../../inception/feats/train_val_test_feats_v4_conv_horizontal_flip'
-images_fc_feats_save_path = '../../inception/feats/train_val_test_feats_v4_fc_horizontal_flip'
+images_conv_feats_save_path = '/content/ARNet_image_captioning/inception/feats/train_val_test_feats_v4_conv_horizontal_flip'
+images_fc_feats_save_path = '/content/ARNet_image_captioning/inception/feats/train_val_test_feats_v4_fc_horizontal_flip'
 
 images_lists = sorted(glob.glob(mscoco_images_path + '/*.jpg'))
 
