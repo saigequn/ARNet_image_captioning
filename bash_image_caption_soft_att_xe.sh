@@ -13,7 +13,7 @@ log_path=log/soft_attention_inception_v4_seed_"$seed"_h_"$lstm_size".txt
 
 if [ "$mode" == "back" ]
 then
-    nohup python3.6 image_caption_soft_att_xe.py --feature_type inception_v4 \
+    nohup python image_caption_soft_att_xe.py --feature_type inception_v4 \
                                                  --seed $seed \
                                                  --version "$version" \
                                                  --lstm_size $lstm_size \
@@ -21,7 +21,7 @@ then
                                                  --train_json_path "$train_json_path" \
                                                  > "$log_path" 2>&1 &
 else
-    python3.6 image_caption_soft_att_xe.py --feature_type inception_v4 \
+    python image_caption_soft_att_xe.py --feature_type inception_v4 \
                                            --seed $seed \
                                            --version "$version" \
                                            --lstm_size $lstm_size \

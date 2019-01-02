@@ -9,7 +9,7 @@ infer_file_path=data/splits/coco_test.txt
 infer_model_path=models/soft_attention_inception_v4_seed_"$seed"/model_epoch-"$idx".pth
 infer_json_path=models/soft_attention_inception_v4_seed_"$seed"/model_epoch-"$idx"_greedy_offline_test.json
 
-python3.6 image_caption_soft_att_infg.py --function inference \
+python image_caption_soft_att_infg.py --function inference \
                                          --lstm_size $lstm_size \
                                          --infer_file_path "$infer_file_path" \
                                          --infer_model_path "$infer_model_path" \

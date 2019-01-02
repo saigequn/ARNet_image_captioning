@@ -15,11 +15,11 @@ if not tf.gfile.Exists(checkpoints_dir):
 slim = tf.contrib.slim
 image_size = inception.inception_v4.default_image_size
 
-mscoco_images_path = '/data1/ailab_view/laviechen/image_captioning_pth/data/images/mscoco'
+mscoco_images_path = '../../data/images/mscoco'
 images_lists = sorted(glob.glob(mscoco_images_path + '/*.jpg'))
 
-images_conv_feats_save_path = '/data1/ailab_view/laviechen/image_captioning_pth/data/feats/mscoco_feats_v4_conv'
-images_fc_feats_save_path = '/data1/ailab_view/laviechen/image_captioning_pth/data/feats/mscoco_feats_v4_fc'
+images_conv_feats_save_path = '../../data/feats/mscoco_feats_v4_conv'
+images_fc_feats_save_path = '../../data/feats/mscoco_feats_v4_fc'
 if os.path.isdir(images_conv_feats_save_path) is False:
     os.mkdir(images_conv_feats_save_path)
 if os.path.isdir(images_fc_feats_save_path) is False:
@@ -36,7 +36,7 @@ init_fn = slim.assign_from_checkpoint_fn(os.path.join(checkpoints_dir, 'inceptio
         
 with tf.Session() as sess:
     init_fn(sess)
-
+    
     for idx, image_path in enumerate(images_lists):
         start_time = time.time()
         
