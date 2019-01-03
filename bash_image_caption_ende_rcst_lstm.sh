@@ -16,7 +16,8 @@ rcst_train_json_path=models/ende_v4_seed_"$seed"_rcst_"$rcst_weight"/rcst_train_
 
 log_path=log/ende_v4_seed_"$seed"_rcst_"$rcst_weight".txt
 
-if [ "$mode" == "back" ] then
+if [ "$mode" == "back" ] 
+then
     nohup python image_caption_ende_rcst_lstm.py --feature_type inception_v4 \
                                                     --seed $seed \
                                                     --version "$version" \

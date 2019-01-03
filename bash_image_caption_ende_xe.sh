@@ -11,7 +11,8 @@ train_json_path=models/ende_inception_v4_seed_"$seed"/xe_train_early_stop.json
 
 log_path=log/ende_inception_v4_seed_"$seed"
 
-if [ "$mode" == "back" ] then
+if [ "$mode" == "back" ] 
+then
     nohup python image_caption_ende_xe.py --feature_type inception_v4 \
                                              --seed $seed \
                                              --version "$version" \
